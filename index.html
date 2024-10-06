@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalentLynk by WorkNest</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="logo.png" alt="WorkNest Logo">
+                <span>WorkNest</span>
+            </div>
+            <div class="search-bar">
+                <form id="searchForm" onsubmit="return searchContent()">
+                    <input type="text" id="searchInput" placeholder="Search...">
+                </form>
+                <script>
+                    function searchContent() {
+                        // Get the value of the search input
+                        const query = document.getElementById('searchInput').value.toLowerCase();
+                        
+                        // Get all elements you want to search through
+                        const contentElements = document.querySelectorAll('h1, h2, p, span');
+                        
+                        let found = false;
+                    
+                        contentElements.forEach(element => {
+                            // Convert the element's text content to lowercase and check for a match
+                            if (element.textContent.toLowerCase().includes(query)) {
+                                // If a match is found, you could scroll to it, highlight it, or otherwise indicate it
+                                element.style.backgroundColor = "yellow";
+                                found = true;
+                                // Optionally, you could scroll the page to the element
+                                element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            } else {
+                                // Reset the background for elements that don't match
+                                element.style.backgroundColor = "transparent";
+                            }
+                        });
+                    
+                        if (!found) {
+                            alert('No matches found');
+                        }
+                    
+                        // Prevent the default form submission
+                        return false;
+                    }
+                    </script>
+                    
+        </div>
+        
+          <nav class="navbar">
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+   
+            <div class="navbar-link">
+              <ul>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#the-app">The App</a></li>
+                    <li><a href="#Features">Features</a></li>
+                    <li><a href="#About Us">About Us</a></li>
+                    <li><a href="#Reviews">Reviews</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                    <li><a href="#More">More</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <script src="script.js"></script>
+
+    <div id="Home"></div>
+    <div class="Home">
+        
+        <div class="content">
+            <h1>TalentLynk by WorkNest</h1>
+            <p>A powerful HRMS mobile app for attendance monitoring, online leave application, payroll management, and employee self-service.</p>
+            <div class="download-buttons">
+                <a href="https://www.apple.com/app-store/" class="app-store-button" target="_blank">
+                    <img src="appstore button.png">
+                </a>
+                <a href="https://play.google.com/store" class="google-play-button" target="_blank">
+                    <img src="playstore button.png">
+                </a>
+            
+            </div>
+        </div>
+
+        <div class="Home-container"></div>
+        <div class="devices">
+            <div class="phone-body">
+                <div class="phone">
+                    <div class="phone-notch"></div>
+                </div>
+            </div>
+            <div class="tablet-body">
+                <div class="tablet"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<div id="the-app"></div>
+<div class="second-section">
+    <div class="main-section">
+        <div class="text-left">
+            <h2>Simplify HR Operations</h2>
+        </div>
+        <div class="text-right">
+            <h3>Efficiency and Ease for HR Management</h3>
+            <p>TalentLynk by WorkNest is designed to streamline HR operations, making attendance monitoring, online leave application, and payroll management efficient and hassle-free for businesses. Employee self-service features empower the workforce, leading to increased productivity and satisfaction.</p>
+            <a href="#" class="download-button">Download the App</a>
+        </div>
+    </div>
+</div>
+</body>
+
+<div class="highlights-section">
+    <h2>Key Highlights</h2>
+    <p class="subtitle">Empowering Businesses</p>
+    <div class="highlights-container">
+        <div class="highlight-item">
+            <div class="icon"><img src="star icon.png" alt="Star Icon"></div>
+            <h3>Attendance Monitoring and Leave Management</h3>
+            <p>Efficiently track and manage employee attendance while simplifying the leave application process with our mobile app. Enhance HR productivity and ensure accurate records with our intuitive features.</p>
+        </div>
+        <div class="highlight-item">
+            <div class="icon"><img src="support icon.png" alt="Support Icon"></div>
+            <h3>24/7 Support</h3>
+            <p>Our dedicated support team is available round the clock to address any queries or issues, ensuring uninterrupted HR management for your organization.</p>
+        </div>
+        <div class="highlight-item">
+            <div class="icon"><img src="robust icon.png" alt="Security Icon"></div>
+            <h3>Robust Security Measures</h3>
+            <p>We prioritize data security and confidentiality, implementing airtight measures to safeguard sensitive HR information and ensure compliance with industry standards.</p>
+        </div>
+    </div>
+</div>
+
+<div id="Features"></div>
+<div class="experience-section">
+    <h2 class="experience-title">Seamless User Experience</h2>
+    <div class="experience-container">
+        <!-- First Item (Text on left, Phone on right) -->
+        <div class="experience-item">
+            <div class="experience-text left-text">
+                <h3>01</h3>
+                <h4>Personalized HR Management</h4>
+                <p>Tailor the HR experience to meet your organization's unique requirements, providing personalized solutions for efficient workforce management and employee engagement.</p>
+            </div>
+            <div class="phone-container right-phone">
+                <div class="phone-frame">
+                    <img src="phone image(1).png" alt="Phone Screen">
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Item (Phone on left, Text on right) -->
+        <div class="experience-item">
+            <div class="phone-container left-phone">
+                <div class="phone-frame">
+                    <img src="phone image(2).png" alt="Phone Screen">
+                </div>
+            </div>
+            <div class="experience-text right-text">
+                <h3>02</h3>
+                <h4>Cloud-Based Technology</h4>
+                <p>Leverage the flexibility and scalability of cloud technology to access HR resources anytime, anywhere, and drive operational agility within your organization.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="About Us"></div>
+<div class="mission-section">
+    <div class="mission-container">
+        <div class="mission-left">
+            <h2>Our Mission</h2>
+        </div>
+        <div class="mission-right">
+            <h3>Simplifying HR Operations</h3>
+            <p>At TalentLynk by WorkNest, we are driven by the mission to simplify HR operations, enabling businesses to focus on their core objectives while we take care of their HR management needs.</p>
+        </div>
+    </div>
+</div>
+
+<div id="Reviews"></div>
+<div class="testimonials-section">
+    <h2>Client Testimonials</h2>
+    <div class="testimonials-container">
+        <div class="testimonial-card">
+            <p class="quote">“The TalentLynk app has revolutionized our HR processes, providing unmatched convenience and efficiency. Highly recommended for businesses of all sizes.”</p>
+            <p class="author">Joan Marks</p>
+            <p class="rating">★★★★★</p>
+        </div>
+        <div class="testimonial-card">
+            <p class="quote">“WorkNest’s HRMS app has significantly improved our HR productivity and employee satisfaction. A game-changer for modern businesses.”</p>
+            <p class="author">Raymond Souza</p>
+            <p class="rating">★★★★★</p>
+        </div>
+        <div class="testimonial-card">
+            <p class="quote">“Incredible app with robust security features. It has simplified our HR operations and enhanced our overall HR management experience.”</p>
+            <p class="author">Maggie Stalk</p>
+            <p class="rating">★★★★★</p>
+        </div>
+    </div>
+</div>
+
+<div id="Contact"></div>
+<div class="contact-section">
+    <div class="contact-text">
+        <h2>For Any Assistance Required Please Reach Out</h2>
+    </div>
+    <div class="contact-form">
+        <form id="contactForm" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+                <div class="form-control">
+                    <label for="first-name">First Name *</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                </div>
+                <div class="form-control">
+                    <label for="last-name">Last Name *</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-control full-width">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-control full-width">
+                    <label for="message">Leave us a message</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-control full-width">
+                    <button type="submit">Submit</button>
+                    <p id="formResponse" class="form-response" style="display: none;">Thanks for submitting!</p>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    function handleSubmit(event) {
+        event.preventDefault(); // Prevent the default form submission behavior
+
+        // Validate form fields (optional, example validation)
+        const firstName = document.getElementById('first-name').value;
+        const lastName = document.getElementById('last-name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        if (!firstName || !lastName || !email) {
+            alert('Please fill out all required fields.');
+            return;
+        }
+
+        // If validation passes, show a response message
+        const formResponse = document.getElementById('formResponse');
+        formResponse.style.display = 'block';
+
+        // Reset form fields
+        document.getElementById('contactForm').reset();
+
+        // Optionally, you can add logic here to send form data to a server
+        // For example, using fetch() to send data to an API endpoint
+    }
+</script>
+
+<footer>
+    <div id="More"></div>
+    <div class="footer-container">
+        <div class="footer-left">
+            <div class="footer-logo">
+                <img src="logo.png" alt="WorkNest Logo">
+                <span>WorkNest</span>
+            </div>
+            <p>Tel: 123-456-7890<br>Email: info@mysite.com</p>
+            <p>500 Terry Francine Street<br>San Francisco, CA 94158</p>
+            <div class="social-icons">
+                <a href="#"><img src="facebook logo.png" alt="Facebook"></a>
+                <a href="#"><img src="X (twitter) logo.png" alt="Twitter"></a>
+                <a href="#"><img src="linkedln logo.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+        <div class="footer-center">
+            <ul>
+                <li><a href="#">Accessibility</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Shipping Policy</a></li>
+                <li><a href="#">Refund Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-right">
+            <div class="app-buttons">
+                <a href="https://www.apple.com/app-store/" class="app-store-button">
+                    <img src="appstore button.png" alt="Download on the App Store">
+                </a>
+                <a href="https://play.google.com/store/apps" class="google-play-button">
+                    <img src="playstore button.png" alt="Get it on Google Play">
+                </a>
+    
+            </div>
+            <p>&copy; 2024 by WorkNest.</a></p>
+        </div>
+    </div>
+</footer>
+</html>

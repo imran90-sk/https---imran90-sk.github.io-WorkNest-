@@ -1,0 +1,1231 @@
+/* Global styles */
+body, header, h1, p, nav ul li a, .buttons a {
+    font-family: 'Raleway', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+    width: 100%;
+}
+
+/* Body styling */
+html, body {
+    background: linear-gradient(135deg, #3f3b99, #090979, #00d4ff);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+/* Header styling */
+header {
+    width: 100%;
+    background-color: #1A1A3F;
+    margin: 0 auto;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    z-index: 100;
+    position: relative;
+    width: 100vw;
+}
+
+/* Header container */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%; /* Make sure the container spans the entire width */
+    padding: 10px 20px;
+    box-sizing: border-box;
+  }
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    color: white;
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo span {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.search-bar {
+    flex-grow: 1;
+    max-width: 500px;
+    margin: 0 20px;
+    position: relative;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background-color: white;
+    font-size: 1rem;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ddd;
+    padding: 1rem;
+}
+
+.navbar-link ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.navbar-link li {
+    list-style: none;
+}
+.navbar-link li a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+    display: block;
+}
+/*.navbar-link li:hover{
+    background-color: whitesmoke;
+}*/
+.navbar-link.active {
+    display: flex;
+}
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #ccc;
+    border-radius: 10px;
+}
+/*@media  (max-width: 768px) {
+    .header-container {
+        justify-content: center; 
+    }
+    .logo {
+        margin: 0 auto; 
+        justify-content: center; 
+        align-items: center;
+    }
+}*/
+@media (max-width: 768px) {
+    .search-bar{
+        display: none;
+    }
+.toggle-button{
+    display: flex;
+}
+/*.navbar-link {
+    width: 100%;
+    display: none;
+}*/
+.navbar-link {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #1A1A3F;
+    position: absolute;
+    top: 60px; /* Adjust position below header */
+    left: 0;
+    z-index: 1;
+}
+.navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+.navbar-link ul {
+    width: 100%;
+    flex-direction: column;
+
+}
+.navbar-link li {
+    text-align: center;
+}
+.navbar-link li a{
+    padding: .5rem 1rem;
+}
+.navbar-link ul.active {
+    display: flex;
+}
+}
+/* Responsive Styling for Mobile (max-width: 475px) */
+@media (max-width: 475px) {
+    .toggle-button {
+        left: auto;
+        right: 20px; /* Adjust toggle button closer to right */
+        font-size: 1.25rem;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem; /* Slightly smaller text */
+    }
+
+    .navbar-link ul.active {
+        display: flex; /* Show navigation when toggle is active */
+    }
+}
+
+/* Adjustments for even smaller screens */
+@media (max-width: 379px) {
+    .toggle-button {
+        right: 20px; /* Adjust the toggle button to stay close to right */
+        font-size: 1.2rem;
+    }
+
+    .toggle-button.opened::before {
+        content: "X";
+        font-size: 1.2rem;
+    }
+}
+
+/* Adjustments for the smallest screens */
+@media (max-width: 320px) {
+    .toggle-button {
+        right: 15px; /* Adjust toggle button slightly for smaller screens */
+        font-size: 1.1rem;
+    }
+
+    .toggle-button.opened::before {
+        content: "X";
+        font-size: 1.1rem;
+    }
+}
+
+.Home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: none;
+    margin: 0 auto;
+    padding: 0;
+    color: white;
+    margin-top: 0;
+    box-sizing: border-box;
+}
+/* Container for the entire section */
+.Home-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+}
+
+
+.content {
+    max-width: 30%;
+    margin-left: 90px;
+    box-sizing: border-box; /* Include padding/margin in width calculation */
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.download-buttons {
+    display: flex;
+    gap: 15px; /* Space between the two buttons */
+}
+
+.download-buttons a {
+    display: inline-flex;
+    align-items: center;
+    background-color: #000; /* Background color */
+    border-radius: 8px;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    transition: transform 0.2s;
+    overflow: hidden;
+}
+
+.download-buttons a img {
+    height: 40px; /* Adjust height as needed */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 10px;
+}
+
+.download-buttons a span {
+    display: inline-block;
+    line-height: 1.2;
+}
+
+.download-buttons a:hover {
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.app-store-button, .google-play-button {
+    background-color: #000; /* Black background for both buttons */
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.app-store-button img, .google-play-button img {
+    height: 40px; /* Set a consistent image height */
+}
+
+.app-store-button span, .google-play-button span {
+    font-size: 16px;
+    color: white;
+}
+/* Devices section */
+.devices {
+    position: relative;
+    width: 600px;
+    height: 600px;
+}
+
+.tablet-body {
+    width: 420px;
+    height: 560px;
+    background-color: #000;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    position: relative;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tablet {
+    width: 400px;
+    height: 540px;
+    background-image: url('Ipad Image.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.phone-body {
+    width: 240px;
+    height: 480px;
+    background-color: #000;
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 180px;
+    left: 50%;
+    transform: translateX(-160%);
+    z-index: 2;
+}
+
+.phone {
+    width: 220px;
+    height: 460px;
+    background-image: url('download.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.phone-notch {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 15px;
+    background-color: black;
+    border-radius: 0 0 10px 10px;
+}
+/* Tablet-Body and Phone-Body Containers */
+.tablet-body-container, .phone-body-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Media Queries for Screens Up to 768px */
+@media (max-width: 768px) {
+    .Home {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .content {
+        max-width: 60%; /* Adjust content width */
+        text-align: center; /* Center text for smaller screens */
+        padding: 20px;
+        margin-right: 12%;
+    }
+
+    h1 {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+
+    .devices {
+        width: 100%; /* Adjust device section to fit screen */
+        height: auto;
+    }
+
+    .tablet-body {
+        width: 320px; /* Smaller tablet size */
+        height: 420px;
+        top: 10px;
+    }
+
+    .tablet {
+        width: 300px;
+        height: 400px;
+    }
+
+    .phone-body {
+        width: 180px; /* Smaller phone size */
+        height: 360px;
+        top: 80px;
+        left: 50%;
+        transform: translateX(-150%);
+    }
+
+    .phone {
+        width: 160px;
+        height: 340px;
+    }
+}
+
+/* Media Queries for Screens Up to 475px */
+@media (max-width: 475px) {
+    .Home {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .content {
+        max-width: 90%;
+        text-align: center; /* Center text for smaller screens */
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Smaller font size */
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-size: 0.9rem; /* Smaller paragraph font size */
+    }
+
+    .devices {
+        width: 100%;
+        height: auto;
+    }
+
+    .tablet-body {
+        width: 260px; /* Further reduce tablet size */
+        height: 360px;
+    }
+
+    .tablet {
+        width: 240px;
+        height: 340px;
+    }
+
+    .phone-body {
+        width: 140px; /* Further reduce phone size */
+        height: 290px;
+        top: 100px;
+        left: 40%;
+        transform: translateX(-80%);
+    }
+
+    .phone {
+        width: 120px;
+        height: 270px;
+    }
+    .download-buttons {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 8px; /* Reduce gap between buttons */
+        align-items: center; /* Center the buttons */
+        width: 100%; /* Make buttons span the full width */
+    }
+
+    .download-buttons a {
+        width: 50%; /* Make buttons take up 80% of the container width */
+        padding: 15px 20px; /* Adjust padding for mobile */
+        font-size: 14px; /* Further reduce font size */
+    }
+
+    .download-buttons a img {
+        height: 30px; /* Further reduce icon size */
+        margin-right: 6px; /* Adjust margin */
+    }
+
+    .app-store-button img, .google-play-button img {
+        height: 30px; /* Adjust image height */
+    }
+
+    .app-store-button span, .google-play-button span {
+        font-size: 14px; /* Adjust font size */
+    }
+
+}
+@media (max-width: 378px) {
+    .content{
+        width: 100%;
+        margin-left: 15%;
+    }
+    h1{
+        margin-left: 0;
+    }
+}
+@media (max-width: 320px) {
+    .download-buttons {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 8px; /* Reduce gap between buttons */
+        align-items: center; /* Center the buttons */
+        width: 100%; /* Make buttons span the full width */
+    }
+
+    .download-buttons a {
+        width: 60%; /* Make buttons take up 80% of the container width */
+        padding: 15px 20px; /* Adjust padding for mobile */
+        font-size: 14px; /* Further reduce font size */
+    }
+
+    .download-buttons a img {
+        height: 30px; /* Further reduce icon size */
+        margin-right: 6px; /* Adjust margin */
+    }
+
+    .app-store-button img, .google-play-button img {
+        height: 30px; /* Adjust image height */
+    }
+
+    .app-store-button span, .google-play-button span {
+        font-size: 14px; /* Adjust font size */
+    }
+}
+
+.main-section {
+    width: 100%; /* Full-width to cover the entire viewport */
+    background-color: white; /* Make sure this section's background is white */
+    padding: 60px 20px; /* Add padding to create space around the content */
+    box-sizing: border-box; /* Ensure padding does not affect the width */
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space out the content */
+    align-items: center; /* Vertically center the content */
+}
+
+.text-left {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.text-left h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #000;
+}
+
+.text-right {
+    flex: 1;
+    padding-left: 40px;
+}
+
+.text-right h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.text-right p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #000;
+    text-decoration: none;
+    border: 1px solid #000;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.download-button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+
+@media (max-width: 768px) {
+    .main-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .text-left, .text-right {
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .text-left h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .text-right h3 {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .text-right p {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .download-button {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+
+
+.highlights-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #3f3b99, #090979, #00d4ff);
+    color: white;
+}
+
+.highlights-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 60px;
+    color: #ddd;
+}
+
+.highlights-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+}
+
+.highlight-item {
+    flex: 1;
+    max-width: 30%;
+    text-align: center; /* Center align text */
+    padding: 20px;
+}
+
+.highlight-item .icon img {
+    width: 30px;  /* Smaller icon width */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.highlight-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.highlight-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+    max-width: 90%; /* Optional: limit paragraph width */
+    margin: 0 auto; /* Center the paragraph */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .highlights-container {
+        flex-direction: column;
+        align-items: center; /* Center align on smaller screens */
+    }
+
+    .highlight-item {
+        max-width: 40%;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 379px) {
+    .highlights-container {
+        width: 100%;
+        height: 94%;
+        margin: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+@media (max-width: 379px) {
+    .highlights-container{
+    width: 100%;
+    height: 95%;
+    }
+}
+
+/* Experience Section */
+.experience-section {
+    padding: 60px 20px;
+    background-color: #f5f5f5;
+}
+
+.experience-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px; /* Space between items */
+    align-items: center;
+}
+
+.experience-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.experience-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.experience-text.left-text {
+    text-align: left;
+    order: 1;
+}
+
+.experience-text.right-text {
+    text-align: left;
+    order: 2;
+}
+
+.phone-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.phone-container.left-phone {
+    order: 1;
+}
+
+.phone-container.right-phone {
+    order: 2;
+}
+
+.phone-frame {
+    width: 220px;
+    height: 450px;
+    background-color: #000;
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.phone-frame img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .experience-item {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .experience-text.left-text,
+    .experience-text.right-text {
+        text-align: center;
+    }
+
+    .phone-container {
+        order: 1;
+    }
+}
+
+/* Mission Section */
+.mission-section {
+    background: linear-gradient(135deg, #3f3b99, #090979, #00d4ff); /* Use your specific background gradient */
+    color: white;
+    min-height: 500px;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.mission-container {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.mission-left {
+    flex: 1;
+    text-align: left;
+}
+
+.mission-left h2 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.mission-right {
+    flex: 1;
+    text-align: right;
+}
+
+.mission-right h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.mission-right p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .mission-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mission-left, .mission-right {
+        flex: none;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .mission-left h2 {
+        font-size: 2.5rem;
+    }
+
+    .mission-right h3 {
+        font-size: 1.5rem;
+    }
+
+    .mission-right p {
+        font-size: 1rem;
+    }
+}
+
+/* Styling for the entire testimonials section */
+.testimonials-section {
+    padding: 40px 20px;
+    background-color: #f8f8f8; /* Light background color */
+    text-align: center;
+}
+
+.testimonials-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* Container for the testimonials */
+.testimonials-container {
+    display: flex;
+    justify-content: space-between; /* Evenly distribute the cards */
+    gap: 20px; /* Space between cards */
+    max-width: 1200px;
+    margin: 0 auto; /* Center the container */
+}
+
+/* Styling for each testimonial card */
+.testimonial-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.testimonial-card .quote {
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.testimonial-card .author {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.testimonial-card .rating {
+    color: #1a73e8; /* Color for the stars */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .testimonials-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial-card {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Contact Section Styling */
+.contact-section {
+    display: flex;
+    min-height: 800px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: linear-gradient(135deg, #3f3b99, #090979, #00d4ff); /* Background gradient */
+    color: white;
+}
+
+.contact-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.contact-text h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.contact-form {
+    flex: 1;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-control {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.form-control.full-width {
+    flex: 100%;
+    margin-right: 0;
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.form-control input,
+.form-control textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: transparent;
+    color: white;
+    font-size: 1rem;
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+    outline: none;
+    border-color: #00d4ff;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: white;
+    color: #090979;
+}
+
+.form-response {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    .contact-text {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .form-group {
+        flex-direction: column;
+    }
+
+    .form-control {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .form-control.full-width {
+        margin-bottom: 20px;
+    }
+}
+
+/* Footer Styling */
+footer {
+    background-color: white;
+    padding: 40px 20px;
+    border-top: 1px solid #ccc;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 40px;
+    height: auto;
+    margin-right: 0;
+}
+
+.footer-left p {
+    margin: 10px 0;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin-right: 10px;
+}
+
+.social-icons img {
+    width: 20px;
+    height: auto;
+}
+
+.footer-center ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-center ul li {
+    margin-bottom: 10px;
+}
+
+.footer-center ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right .app-buttons a {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.footer-right .app-buttons img {
+    width: 150px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.footer-right p {
+    font-size: 12px;
+    color: #888;
+}
+
+.footer-right p a {
+    color: #000;
+    text-decoration: none;
+}
+
+.footer-right p a:hover {
+    text-decoration: underline;
+}
+/* App Buttons Container */
+.app-buttons {
+    display: flex;
+    gap: 20px; /* Space between buttons */
+    margin-top: 20px;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+@media (max-width: 428px) {
+    /* Footer Styling for Smaller Screens */
+    footer {
+        display: flex;
+        flex-direction: column; /* Stack the items vertically */
+        align-items: center; /* Center-align the items */
+        text-align: center; /* Center-align text */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .footer-container {
+        flex-direction: column; /* Ensure content is vertically stacked */
+        align-items: center; /* Center align the items */
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        width: 100%; /* Make each section take up full width */
+        text-align: left; /* Center-align text */
+        margin-bottom: 15px; /* Add space between sections */
+    }
+
+    .app-buttons {
+        display: block;
+        gap: 20px; /* Space between buttons */
+        margin-top: 20px;
+        width: 60%;
+    }
+
+    /* Reduce font size for other sections */
+    .footer-left, .footer-center, .footer-right {
+        font-size: 14px; /* Reduce font size */
+    }
+
+    /* Icons size adjustment */
+    .footer-left .social-icons img {
+        width: 30px; /* Smaller icon size */
+        height: auto;
+    }
+}
+
+@media (max-width: 380px) {
+    .app-buttons {
+        width: 70%;
+    }
+}
+
+@media (max-width: 325px) {
+    .app-buttons {
+        width: 75%;
+    }
+}
+
+    
+
+
+
+
+
+
+
+
+
+
